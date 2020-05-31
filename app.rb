@@ -24,10 +24,12 @@ end
 
 
 get "/" do
-    erb :index
+        erb :index
 end
+
+
 get '/new' do
-    erb :new
+            erb :new
 end
 
 post '/new' do
