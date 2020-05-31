@@ -21,8 +21,13 @@ configure do
     content      TEXT
     )'
 end
+
+
+get "/" do
+    erb :index
+end
 get '/new' do
-   erb :new
+    erb :new
 end
 
 post '/new' do
@@ -32,6 +37,6 @@ post '/new' do
         @error = 'Type post text'
         return erb :new
       end
-  
+  @db.execute 'insert into Posts (content,created_date) values (?,datetime());',[content]
   erb "You typed #{content}"
 end   
