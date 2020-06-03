@@ -1,7 +1,16 @@
 <h2>ADD NEW POST</h2>
-<p2><form action="/new" method = "POST" role="form">
-<textarea name="content" class="form-control"rows="6" placeholder="Type post text here"></textarea>
-<br /> 
+<br />
+<br />
 
+<p2>
+<form action="/new" method = "POST" role="form">
+
+	<div class="col">
+      <input name="author"  type="text" style= "width: 400px" class="form-control" placeholder= "Type your nickname here" value= <%= @author%>>
+    </div>
+<br />
+<textarea name="content" style= "width: 400px"	 class="form-control"rows="6" placeholder="Type post text here" value= <%= @content%>></textarea>
+<br /> 
 <button type="submit" class="btn btn-primary">Submit</button>
-</form></p2>
+</form>
+</p2>
